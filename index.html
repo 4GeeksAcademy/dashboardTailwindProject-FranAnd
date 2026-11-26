@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard · Creator Studio</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="min-h-screen bg-[#080d16] text-slate-100 antialiased">
+    <div class="min-h-screen lg:flex">
+        <aside class="hidden w-64 shrink-0 flex-col border-r border-slate-800 bg-[#111a27] p-5 lg:flex">
+            <a href="#" class="mb-10 flex items-center gap-3 px-2"><span
+                    class="grid size-10 place-items-center rounded-xl bg-cyan-500 text-white"><i data-lucide="layers"
+                        class="size-5"></i></span><span><span class="block text-sm font-bold">studio<span
+                            class="text-cyan-400">.co</span></span><span class="text-xs text-slate-500">Creator
+                        dashboard</span></span></a>
+            <p class="mb-3 px-3 text-[10px] font-bold uppercase tracking-[.15em] text-slate-500">Menú principal</p>
+            <nav class="space-y-1 text-sm"><a
+                    class="flex items-center gap-3 rounded-xl bg-cyan-950/60 px-3 py-2.5 font-semibold text-cyan-300"
+                    href="#resumen"><i data-lucide="layout-dashboard" class="size-4"></i>Resumen</a><a
+                    class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-slate-500 hover:bg-[#0c1420]"
+                    href="#drivers"><i data-lucide="chart-no-axes-combined" class="size-4"></i>Rendimiento</a><a
+                    class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-slate-500 hover:bg-[#0c1420]"
+                    href="#productos"><i data-lucide="shopping-bag" class="size-4"></i>Productos</a><a
+                    class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-slate-500 hover:bg-[#0c1420]"
+                    href="#campanas"><i data-lucide="megaphone" class="size-4"></i>Campañas</a></nav>
+            <div class="mt-auto rounded-2xl bg-[#0c1420] p-4">
+                <div class="mb-2 flex items-center gap-2 text-xs font-semibold"><i data-lucide="circle-help"
+                        class="size-4 text-cyan-400"></i>¿Necesitas ayuda?</div>
+                <p class="mb-3 text-xs leading-5 text-slate-500">Estamos aquí para ayudarte a crecer.</p><a href="#"
+                    class="text-xs font-semibold text-cyan-300">Contactar soporte →</a>
+            </div>
+        </aside>
+        <main class="min-w-0 flex-1">
+            <header
+                class="sticky top-0 z-10 flex h-[72px] items-center justify-between border-b border-slate-800 bg-[#111a27]/90 px-5 backdrop-blur sm:px-8">
+                <div class="flex items-center gap-3"><span
+                        class="grid size-9 place-items-center rounded-xl bg-cyan-900/50 text-cyan-300 lg:hidden"><i
+                            data-lucide="layers" class="size-5"></i></span>
+                    <div>
+                        <p class="text-xs text-slate-500">Workspace / <span class="text-slate-300">Resumen</span></p>
+                        <h1 class="text-sm font-bold">Panel de rendimiento</h1>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3"><button
+                        class="hidden items-center gap-2 rounded-lg border border-slate-800 px-3 py-2 text-xs font-medium text-slate-300 sm:flex"><i
+                            data-lucide="calendar-days" class="size-4"></i>Últimos 30 días<i data-lucide="chevron-down"
+                            class="size-3"></i></button><button aria-label="Notificaciones"
+                        class="relative rounded-lg p-2 text-slate-500 hover:bg-slate-800"><i data-lucide="bell"
+                            class="size-5"></i><span
+                            class="absolute right-1.5 top-1.5 size-2 rounded-full bg-rose-950/400 ring-2 ring-white"></span></button><span
+                        class="grid size-9 place-items-center rounded-full bg-amber-900/50 text-xs font-bold text-amber-800">AM</span>
+                </div>
+            </header>
+            <div class="mx-auto max-w-[1440px] space-y-8 p-5 sm:p-8">
+                <section id="resumen" class="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+                    <div>
+                        <p class="mb-1 text-sm text-slate-500">Miércoles, 26 de noviembre</p>
+                        <h2 class="text-2xl font-bold tracking-tight">¡Hola, Andrea! 👋</h2>
+                        <p class="mt-1 text-sm text-slate-500">Aquí tienes el resumen de tu negocio.</p>
+                    </div><button
+                        class="flex w-fit items-center gap-2 rounded-xl bg-cyan-500 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-cyan-400"><i
+                            data-lucide="download" class="size-4"></i>Exportar informe</button>
+                </section>
+                <section aria-labelledby="kpi-title">
+                    <div class="mb-4 flex items-center justify-between">
+                        <div>
+                            <h3 id="kpi-title" class="text-base font-bold">Indicadores principales</h3>
+                            <p class="text-xs text-slate-500">Comparativa con los 30 días anteriores</p>
+                        </div><span
+                            class="hidden rounded-full bg-emerald-950/40 px-2.5 py-1 text-xs font-medium text-emerald-700 sm:inline-flex">↑
+                            12,8% vs. periodo anterior</span>
+                    </div>
+                    <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+                        <article class="rounded-2xl border border-slate-800 bg-[#111a27] p-5">
+                            <div class="flex items-center justify-between"><span
+                                    class="text-xs font-medium text-slate-500">Ingresos totales</span><span
+                                    class="grid size-9 place-items-center rounded-xl bg-cyan-950/60 text-cyan-400"><i
+                                        data-lucide="wallet" class="size-4"></i></span></div>
+                            <p class="mt-4 text-2xl font-bold">€12.840 <span
+                                    class="text-xs font-medium text-emerald-600">↑ 18,6%</span></p>
+                            <p class="mt-1 text-xs text-slate-500">Comisiones y ventas</p>
+                            <div class="mt-4 h-1.5 rounded-full bg-slate-800">
+                                <div class="h-1.5 w-[72%] rounded-full bg-cyan-950/600"></div>
+                            </div>
+                        </article>
+                        <article class="rounded-2xl border border-slate-800 bg-[#111a27] p-5">
+                            <div class="flex items-center justify-between"><span
+                                    class="text-xs font-medium text-slate-500">Conversiones</span><span
+                                    class="grid size-9 place-items-center rounded-xl bg-sky-950/50 text-sky-600"><i
+                                        data-lucide="mouse-pointer-click" class="size-4"></i></span></div>
+                            <p class="mt-4 text-2xl font-bold">486 <span class="text-xs font-medium text-emerald-600">↑
+                                    8,2%</span></p>
+                            <p class="mt-1 text-xs text-slate-500">Tasa de conversión · 4,8%</p>
+                            <div class="mt-4 h-1.5 rounded-full bg-slate-800">
+                                <div class="h-1.5 w-[58%] rounded-full bg-sky-950/500"></div>
+                            </div>
+                        </article>
+                        <article class="rounded-2xl border border-slate-800 bg-[#111a27] p-5">
+                            <div class="flex items-center justify-between"><span
+                                    class="text-xs font-medium text-slate-500">Audiencia alcanzada</span><span
+                                    class="grid size-9 place-items-center rounded-xl bg-amber-950/40 text-amber-600"><i
+                                        data-lucide="users" class="size-4"></i></span></div>
+                            <p class="mt-4 text-2xl font-bold">84,2k <span
+                                    class="text-xs font-medium text-emerald-600">↑ 11,4%</span></p>
+                            <p class="mt-1 text-xs text-slate-500">Usuarios únicos</p>
+                            <div class="mt-4 h-1.5 rounded-full bg-slate-800">
+                                <div class="h-1.5 w-[82%] rounded-full bg-amber-400"></div>
+                            </div>
+                        </article>
+                        <article class="rounded-2xl border border-slate-800 bg-[#111a27] p-5">
+                            <div class="flex items-center justify-between"><span
+                                    class="text-xs font-medium text-slate-500">Engagement medio</span><span
+                                    class="grid size-9 place-items-center rounded-xl bg-rose-950/40 text-rose-500"><i
+                                        data-lucide="heart" class="size-4"></i></span></div>
+                            <p class="mt-4 text-2xl font-bold">6,42% <span class="text-xs font-medium text-rose-500">↓
+                                    0,4%</span></p>
+                            <p class="mt-1 text-xs text-slate-500">NPS · 72 puntos</p>
+                            <div class="mt-4 h-1.5 rounded-full bg-slate-800">
+                                <div class="h-1.5 w-[64%] rounded-full bg-rose-400"></div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                <section id="drivers" class="grid gap-4 xl:grid-cols-3">
+                    <article class="rounded-2xl border border-slate-800 bg-[#111a27] p-5 xl:col-span-2">
+                        <div class="mb-6 flex items-start justify-between">
+                            <div>
+                                <h3 class="text-sm font-bold">Evolución de ingresos</h3>
+                                <p class="mt-1 text-xs text-slate-500">Ingresos y comisiones a lo largo del tiempo</p>
+                            </div><button
+                                class="flex items-center gap-1 rounded-lg border border-slate-800 px-2.5 py-1.5 text-xs text-slate-300">Últimos
+                                30 días<i data-lucide="chevron-down" class="size-3"></i></button>
+                        </div>
+                        <div class="flex h-44 items-end gap-2 border-b border-slate-100 px-1 sm:gap-4">
+                            <div class="flex h-full flex-1 flex-col justify-end gap-2">
+                                <div class="flex h-full items-end gap-1"><i
+                                        class="h-[38%] flex-1 rounded-t bg-cyan-900/50"></i><i
+                                        class="h-[54%] flex-1 rounded-t bg-cyan-950/600"></i></div><span
+                                    class="pb-2 text-center text-[10px] text-slate-500">1–5 nov.</span>
+                            </div>
+                            <div class="flex h-full flex-1 flex-col justify-end gap-2">
+                                <div class="flex h-full items-end gap-1"><i
+                                        class="h-[47%] flex-1 rounded-t bg-cyan-900/50"></i><i
+                                        class="h-[62%] flex-1 rounded-t bg-cyan-950/600"></i></div><span
+                                    class="pb-2 text-center text-[10px] text-slate-500">6–10 nov.</span>
+                            </div>
+                            <div class="flex h-full flex-1 flex-col justify-end gap-2">
+                                <div class="flex h-full items-end gap-1"><i
+                                        class="h-[43%] flex-1 rounded-t bg-cyan-900/50"></i><i
+                                        class="h-[49%] flex-1 rounded-t bg-cyan-950/600"></i></div><span
+                                    class="pb-2 text-center text-[10px] text-slate-500">11–15 nov.</span>
+                            </div>
+                            <div class="flex h-full flex-1 flex-col justify-end gap-2">
+                                <div class="flex h-full items-end gap-1"><i
+                                        class="h-[59%] flex-1 rounded-t bg-cyan-900/50"></i><i
+                                        class="h-[72%] flex-1 rounded-t bg-cyan-950/600"></i></div><span
+                                    class="pb-2 text-center text-[10px] text-slate-500">16–20 nov.</span>
+                            </div>
+                            <div class="flex h-full flex-1 flex-col justify-end gap-2">
+                                <div class="flex h-full items-end gap-1"><i
+                                        class="h-[51%] flex-1 rounded-t bg-cyan-900/50"></i><i
+                                        class="h-[88%] flex-1 rounded-t bg-cyan-950/600"></i></div><span
+                                    class="pb-2 text-center text-[10px] text-slate-500">21–26 nov.</span>
+                            </div>
+                        </div>
+                        <div class="mt-3 flex justify-center gap-5 text-[10px] text-slate-500"><span
+                                class="flex items-center gap-1.5"><i
+                                    class="size-2 rounded-sm bg-cyan-900/50"></i>Periodo anterior</span><span
+                                class="flex items-center gap-1.5"><i
+                                    class="size-2 rounded-sm bg-cyan-950/600"></i>Periodo actual</span></div>
+                    </article>
+                    <article class="rounded-2xl border border-slate-800 bg-[#111a27] p-5">
+                        <div class="mb-5">
+                            <h3 class="text-sm font-bold">Conversión por etapas</h3>
+                            <p class="mt-1 text-xs text-slate-500">Funnel de ventas</p>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="mb-1.5 flex justify-between text-xs"><span
+                                        class="text-slate-300">Alcance</span><span class="font-semibold">84.200</span>
+                                </div>
+                                <div class="h-2 rounded-full bg-cyan-900/50">
+                                    <div class="h-2 w-full rounded-full bg-cyan-950/600"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="mb-1.5 flex justify-between text-xs"><span class="text-slate-300">Visitas al
+                                        perfil</span><span class="font-semibold">18.640 (22%)</span></div>
+                                <div class="h-2 rounded-full bg-sky-900/50">
+                                    <div class="h-2 w-[72%] rounded-full bg-sky-950/500"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="mb-1.5 flex justify-between text-xs"><span class="text-slate-300">Clics en
+                                        enlace</span><span class="font-semibold">6.840 (36,7%)</span></div>
+                                <div class="h-2 rounded-full bg-amber-900/50">
+                                    <div class="h-2 w-[48%] rounded-full bg-amber-400"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="mb-1.5 flex justify-between text-xs"><span
+                                        class="text-slate-300">Compras</span><span class="font-semibold">486
+                                        (7,1%)</span></div>
+                                <div class="h-2 rounded-full bg-emerald-900/50">
+                                    <div class="h-2 w-[28%] rounded-full bg-emerald-950/400"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+                <section class="grid gap-4 lg:grid-cols-2">
+                    <article class="rounded-2xl border border-slate-800 bg-[#111a27] p-5">
+                        <div class="mb-4">
+                            <h3 class="text-sm font-bold">Rendimiento por plataforma</h3>
+                            <p class="mt-1 text-xs text-slate-500">Alcance, engagement y conversiones</p>
+                        </div>
+                        <div class="divide-y divide-slate-100">
+                            <div
+                                class="grid grid-cols-[1fr_1fr_1fr_1fr] py-3 text-[10px] font-semibold uppercase tracking-wide text-slate-500">
+                                <span>Plataforma</span><span>Alcance</span><span>Engagement</span><span>Ventas</span>
+                            </div>
+                            <div class="grid grid-cols-[1fr_1fr_1fr_1fr] py-3 text-xs"><span class="font-semibold">◎
+                                    Instagram</span><span>42,8k</span><span>7,82%</span><span
+                                    class="font-semibold">218</span></div>
+                            <div class="grid grid-cols-[1fr_1fr_1fr_1fr] py-3 text-xs"><span class="font-semibold">♪
+                                    TikTok</span><span>28,4k</span><span>9,14%</span><span
+                                    class="font-semibold">176</span></div>
+                            <div class="grid grid-cols-[1fr_1fr_1fr_1fr] py-3 text-xs"><span class="font-semibold">▶
+                                    YouTube</span><span>13,0k</span><span>4,26%</span><span
+                                    class="font-semibold">92</span></div>
+                        </div>
+                    </article>
+                    <article id="productos" class="rounded-2xl border border-slate-800 bg-[#111a27] p-5">
+                        <div class="mb-4 flex items-center justify-between">
+                            <div>
+                                <h3 class="text-sm font-bold">Top productos</h3>
+                                <p class="mt-1 text-xs text-slate-500">Mejor rendimiento este mes</p>
+                            </div><a href="#campanas" class="text-xs font-semibold text-cyan-300">Ver todos →</a>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3"><span
+                                    class="grid size-10 place-items-center rounded-xl bg-amber-950/40 text-lg">✨</span>
+                                <div class="min-w-0 flex-1">
+                                    <p class="truncate text-xs font-semibold">Curso de marca personal</p>
+                                    <p class="mt-1 text-[10px] text-slate-500">124 conversiones · ROI 4,2x</p>
+                                </div><span class="text-xs font-bold">€3.720</span>
+                            </div>
+                            <div class="flex items-center gap-3"><span
+                                    class="grid size-10 place-items-center rounded-xl bg-sky-950/50 text-lg">🎨</span>
+                                <div class="min-w-0 flex-1">
+                                    <p class="truncate text-xs font-semibold">Plantillas para creadores</p>
+                                    <p class="mt-1 text-[10px] text-slate-500">98 conversiones · ROI 3,8x</p>
+                                </div><span class="text-xs font-bold">€2.450</span>
+                            </div>
+                            <div class="flex items-center gap-3"><span
+                                    class="grid size-10 place-items-center rounded-xl bg-rose-950/40 text-lg">📸</span>
+                                <div class="min-w-0 flex-1">
+                                    <p class="truncate text-xs font-semibold">Kit de fotografía móvil</p>
+                                    <p class="mt-1 text-[10px] text-slate-500">76 conversiones · ROI 3,1x</p>
+                                </div><span class="text-xs font-bold">€1.824</span>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+                <section id="campanas" class="grid gap-4 lg:grid-cols-[1.5fr_1fr]">
+                    <article class="overflow-hidden rounded-2xl border border-slate-800 bg-[#111a27]">
+                        <div class="flex items-center justify-between p-5">
+                            <div>
+                                <h3 class="text-sm font-bold">Campañas recientes</h3>
+                                <p class="mt-1 text-xs text-slate-500">Seguimiento de tus últimas campañas</p>
+                            </div><button
+                                class="flex items-center gap-1 rounded-lg border border-slate-800 px-2.5 py-1.5 text-xs text-slate-300">Filtrar<i
+                                    data-lucide="list-filter" class="size-3"></i></button>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full min-w-[560px] text-left text-xs">
+                                <thead class="bg-[#0c1420] text-[10px] uppercase tracking-wide text-slate-500">
+                                    <tr>
+                                        <th class="px-5 py-3 font-semibold">Campaña</th>
+                                        <th class="px-4 py-3 font-semibold">Fecha</th>
+                                        <th class="px-4 py-3 font-semibold">Conversiones</th>
+                                        <th class="px-5 py-3 font-semibold">Estado</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-100">
+                                    <tr>
+                                        <td class="px-5 py-3.5 font-semibold">Black Friday · Curso</td>
+                                        <td class="px-4 py-3.5 text-slate-500">20–26 nov.</td>
+                                        <td class="px-4 py-3.5">186</td>
+                                        <td class="px-5 py-3.5"><span
+                                                class="rounded-full bg-emerald-950/40 px-2 py-1 text-[10px] font-medium text-emerald-700">Activa</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-5 py-3.5 font-semibold">Plantillas de otoño</td>
+                                        <td class="px-4 py-3.5 text-slate-500">10–19 nov.</td>
+                                        <td class="px-4 py-3.5">124</td>
+                                        <td class="px-5 py-3.5"><span
+                                                class="rounded-full bg-slate-800 px-2 py-1 text-[10px] font-medium text-slate-300">Finalizada</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-5 py-3.5 font-semibold">Rutina de creadora</td>
+                                        <td class="px-4 py-3.5 text-slate-500">1–9 nov.</td>
+                                        <td class="px-4 py-3.5">98</td>
+                                        <td class="px-5 py-3.5"><span
+                                                class="rounded-full bg-slate-800 px-2 py-1 text-[10px] font-medium text-slate-300">Finalizada</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </article>
+                    <article class="rounded-2xl border border-slate-800 bg-[#111a27] p-5">
+                        <div class="mb-4">
+                            <h3 class="text-sm font-bold">Alertas y oportunidades</h3>
+                            <p class="mt-1 text-xs text-slate-500">Puntos a tener en cuenta</p>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex gap-3 rounded-xl border border-emerald-100 bg-emerald-950/40/60 p-3"><i
+                                    data-lucide="trending-up" class="mt-0.5 size-4 shrink-0 text-emerald-600"></i>
+                                <div>
+                                    <p class="text-xs font-semibold">¡TikTok está creciendo!</p>
+                                    <p class="mt-1 text-[10px] leading-4 text-slate-500">El engagement subió un 22%.
+                                        Prueba a publicar más reels.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-3 rounded-xl border border-amber-100 bg-amber-950/40/60 p-3"><i
+                                    data-lucide="lightbulb" class="mt-0.5 size-4 shrink-0 text-amber-600"></i>
+                                <div>
+                                    <p class="text-xs font-semibold">Oportunidad de mejora</p>
+                                    <p class="mt-1 text-[10px] leading-4 text-slate-500">YouTube genera buen alcance,
+                                        pero puede mejorar su conversión.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+                <footer class="pb-2 text-center text-[10px] text-slate-500">Datos de ejemplo · Actualizado hace 2 horas
+                </footer>
+            </div>
+        </main>
+    </div>
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>
